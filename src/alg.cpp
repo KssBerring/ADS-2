@@ -4,17 +4,17 @@
 
 
 double pown(double value, uint16_t n) {
- if (n == 0) {
+ if (n == 0){
   return 1;
- } else {
+ } else{
   return value * pown(value, n - 1);
  }
 }
 
 uint64_t fact(uint16_t n) {
- if (n == 0) {
+ if (n == 0){
   return 1;
- } else {
+ } else{
   return n * fact(n - 1);
  }
 }
