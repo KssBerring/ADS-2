@@ -20,8 +20,8 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-    
-    return pown(x,n) / fact(n);
+    double r = pown(x,n) / fact(n);
+    return r;
 }
 
 double expn(double x, uint16_t count) {
@@ -33,7 +33,7 @@ double expn(double x, uint16_t count) {
 }
 
 double sinn(double x, uint16_t count) {
-    double res3 = x;
+    double result = x;
     for (uint64_t i = 2; i <= count; i++) {
         result += pown((-1.0), i - 1) * calcItem(x, (2 * i) - 1);
     }
