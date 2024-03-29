@@ -20,7 +20,8 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-    double r = pown(x,n) / fact(n);
+    double r = 0;
+    r = pown(x, n)/fact(n);
     return r;
 }
 
