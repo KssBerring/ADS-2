@@ -31,34 +31,31 @@ double calcItem(double x, uint16_t n) {
 double expn(double x, uint16_t count) {
  
   double result = 1.0; 
-    for (uint16_t n = 1; n < count; ++n) {
+    for (uint16_t n = 1; n <= count; ++n) {
         result += calcItem(x, n);
     }
     return result;
 }
 
 double sinn(double x, uint16_t count) {
- 
- double result = 0;
-int sign = 1;
-for (uint16_t i = 1; i < count*2; ++i) {
-    if ((i / 2) != 0) {
-        result += sign * calcItem(x, i);
+ double result = 0.0;
+ int sign = 1;
+ for (uint16_t n = 1; n <= count; ++n) {
+        result += sign * calcItem(x, 2*n-1);
         sign *= -1;
-    }
-}
-return result;
+ }
+ return result;
 }
 
 double cosn(double x, uint16_t count) {
- 
- double result = 0;
-int sign = 1;
-for (uint16_t i = 0; i < count*2; ++i) {
-    if ((i / 2) == 0) {
-        result += sign * calcItem(x, i);
-        sign *= -1;
+     double result = 1.0;
+    int sign = -1;
+    for (uint16_t i = 2; i <= count; ++i) {
+
+            result += sign * calcItem(x, 2*i-2);
+            sign *= -1;
+        
     }
+    return result;
 }
-return result;
 }
